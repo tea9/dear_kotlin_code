@@ -2,9 +2,6 @@ package com.example.homepage.activity
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
@@ -16,10 +13,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.homepage.R
 import com.example.homepage.adapter.ViewPagerAdapter
-import com.example.homepage.fragment.HomeFragment
-import kotlinx.android.synthetic.main.activity_home_vierpager.*
+import kotlinx.android.synthetic.main.activity_home_viewpager.*
 import kotlinx.android.synthetic.main.item_banner.*
-import net.lucode.hackware.magicindicator.FragmentContainerHelper
 import net.lucode.hackware.magicindicator.ViewPagerHelper
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter
@@ -29,7 +24,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.Li
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ColorTransitionPagerTitleView
 import org.jetbrains.anko.toast
 import java.util.*
-import kotlin.collections.ArrayList
 
 /**
  * created by tea9 at 2018/7/10
@@ -39,22 +33,16 @@ class HomeViewPagerActivity :AppCompatActivity() {
     var tabList = arrayListOf("tab1","tab2","tab3","tab4","tab5","tab6","tab7")
     var imgList:ArrayList<String> = arrayListOf("https://images.unsplash.com/photo-1531026383433-6ed5a112afbc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c010c700aac502636ad0b579ce1274a4&auto=format&fit=crop&w=1650&q=80","https://images.unsplash.com/photo-1531075515553-b4d1f75ff534?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3f6b409e70fca36a74369d882e85f49&auto=format&fit=crop&w=1567&q=80","https://images.unsplash.com/photo-1531130744926-1d86103aebeb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=28f240aae3de685fc4742f09c922f6f8&auto=format&fit=crop&w=1714&q=80")
     var mesList = arrayListOf("您的公告1","您的公告2","您的公告3")
-    var fragmentList:ArrayList<Fragment>? = ArrayList()
-    var fragmentContainerHelper = FragmentContainerHelper()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_vierpager)
+        setContentView(R.layout.activity_home_viewpager)
         setSupportActionBar(toolbar)
 
         initBanner()
         initViewFlipper()
-//        initFragments()
         initViewpager()
         initMagicIndicator()
-
-
-//        switchPages(1)
 
     }
 
@@ -82,13 +70,6 @@ class HomeViewPagerActivity :AppCompatActivity() {
         view_flipper.isAutoStart = true
     }
 
-    fun initFragments() {
-        for(i in tabList.indices) {
-            var fragment = HomeFragment.create("shaomiaohello"+i)
-            fragmentList!!.add(fragment)
-        }
-    }
-
     fun initMagicIndicator() {
         var commonNavigator = CommonNavigator(this)
         commonNavigator.adapter = object : CommonNavigatorAdapter() {
@@ -103,16 +84,9 @@ class HomeViewPagerActivity :AppCompatActivity() {
                 colorTransitionPagerTitleView.text = tabList[p1].toUpperCase()
 
                 colorTransitionPagerTitleView.setOnClickListener (View.OnClickListener {
-                    //                    view_pager.currentItem = p1
-                    fragmentContainerHelper.handlePageSelected(p1);
-                    switchPages(p1)
+                    view_pager.currentItem = p1
 
                 })
-//                colorTransitionPagerTitleView.setOnClickListener(View.OnClickListener {
-//                    commonNavigator.onPageSelected(p1)
-//                    commonNavigator.onPageScrolled(p1, 0f, 0)
-//                })
-
                 return colorTransitionPagerTitleView
             }
             override fun getIndicator(p0: Context?): IPagerIndicator {
@@ -134,31 +108,4 @@ class HomeViewPagerActivity :AppCompatActivity() {
 //        adapter!!.notifyDataSetChanged()
     }
 
-    fun switchPages(index:Int) {
-        var fragmentManager : FragmentManager = supportFragmentManager
-        var fragmentTransaction : FragmentTransaction = fragmentManager.beginTransaction()
-        var fragment:Fragment? = null
-        var i =0
-        var j = fragmentList!!.size
-        while(i<j) {
-            if (i == index) {
-                i++
-                continue;
-            }
-            fragment = fragmentList!!.get(i)
-            if (fragment.isAdded) {
-                fragmentTransaction.hide(fragment)
-            }
-            i++
-        }
-
-        fragment = fragmentList!!.get(index)
-        if (fragment.isAdded) {
-            fragmentTransaction.show(fragment)
-        } else {
-            fragmentTransaction.add(R.id.ll_content,fragment)
-        }
-        fragmentTransaction.commitAllowingStateLoss()
-
-    }
 }
