@@ -272,7 +272,9 @@ recyclerview布局
 
 [Gradle中文用户组](https://www.jianshu.com/c/9e24d4c23a84)  
 
-[Groovy语言规范》-语法](http://ifeve.com/groovy-syntax/)
+[Groovy语言规范》-语法](http://ifeve.com/groovy-syntax/)  
+
+[仿支付宝首页头部伸缩效果](https://juejin.im/post/5b42066df265da0f742ec80e?utm_source=gold_browser_extension)
 
 
 
