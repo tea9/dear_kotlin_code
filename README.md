@@ -1,8 +1,4 @@
 
-<video src="https://github.com/tea9/dear_kotlin_code/blob/master/01.mp4?raw=true" controls="controls">
-您的浏览器不支持 video 标签。
-</video>
-
 ![img](https://github.com/tea9/dear_kotlin_code/blob/master/01.png?raw=true)
 
 ## 这是完全用kotlin写的Demo

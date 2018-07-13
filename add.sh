@@ -19,9 +19,9 @@ echo "输入更改留言在下方。"
 echo ""
 read -p "更改的留言是:"
 
-rm *~
-rm **/*~
-rm **/**/*~
+# rm *~
+# rm **/*~
+# rm **/**/*~
 
 git add .
 git stage .
@@ -35,7 +35,7 @@ clear
 
 git status
 
-git gc
+# git gc
 
 clear
 
@@ -48,6 +48,6 @@ echo "上传到仓库成功!"
 clear 
 
 echo ""
-git gc
+# git gc
 echo "---------------------------"
 echo "关机~"
