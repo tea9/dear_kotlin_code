@@ -64,7 +64,7 @@ class HomeFragment: Fragment() {
 
 //        var item:Array<String> = Gson().fromJson(data,Array<String>::class.java)
         var list = arrayListOf<String>(data!!,"shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb")
-        adapter = object : BaseQuickAdapter<String,BaseViewHolder>(R.layout.layout_item,list as List<String>) {
+        adapter = object : BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_layout,list as List<String>) {
             override fun convert(helper: BaseViewHolder?, item: String?) {
                 helper!!.setText(R.id.item_tv,item)
                 helper.addOnClickListener(R.id.item_tv)

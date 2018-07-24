@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">homepage</string>
+    <string name="btn1">可滑动的tab</string>
+    <string name="btn2">不可滑动的tab</string>
+    <string name="btn3">btn3</string>
+    <string name="tab1">tab1</string>
+    <string name="tab2">tab2</string>
+
+    <string name="title">这是个标题字符串</string>
+    <string name="num">22222.22</string>
+
+    <string name="long_content">这是一个长内容长内容长内容这是一个是一个这是这是一个内容长内容这是一个内容长内容这是一个内容长内容一个内容长内容这是一个长内容长内容长内容这是一个长内容长内容长内容这是一个</string>
+
 </resources>
