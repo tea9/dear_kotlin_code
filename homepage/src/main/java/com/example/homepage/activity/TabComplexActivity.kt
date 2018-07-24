@@ -20,6 +20,15 @@ class TabComplexActivity : AppCompatActivity(), View.OnClickListener {
      * 二级菜单
      * https://blog.csdn.net/shangming150/article/details/80006016
      * **/
+    /***
+     * rv 多item布局
+     * https://blog.csdn.net/zchlww/article/details/51691123
+     * https://blog.csdn.net/shangming150/article/details/80006016
+     *
+     * lv多item
+     * https://blog.csdn.net/lplj717/article/details/53420593
+     */
+
 
     var views = arrayListOf<View>()
 
