@@ -8,10 +8,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ExpandableListView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.example.homepage.R
-import com.example.homepage.views.CustomExpandableListView1
 
 /**
  * created by tea9 at 2018/7/20
@@ -70,7 +70,7 @@ class TabComplexViewPagerAdapter(views1:ArrayList<View>, content1:Activity, data
             }
             1 -> {
                 var headView = LayoutInflater.from(content).inflate(R.layout.item_tab_complex2_head,null)
-                var lv1 = views[position].findViewById<CustomExpandableListView1>(R.id.list_view)
+                var lv1 = views[position].findViewById<ExpandableListView>(R.id.list_view)
                 lv1.setGroupIndicator(null)
                 lv1.setAdapter(ListViewAdapter(content as Context))
                 for (i in 0 until 4) {

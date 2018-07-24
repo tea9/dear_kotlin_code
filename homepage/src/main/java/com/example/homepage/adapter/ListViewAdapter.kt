@@ -15,8 +15,7 @@ import org.jetbrains.anko.find
  */
 class ListViewAdapter(context: Context) : BaseExpandableListAdapter() {
 
-
-    var groupString = arrayOf("西游记", "水浒传", "三国演义", "红楼梦")
+    var groupString = arrayOf("--西游记", "--水浒传", "--三国演义", "--红楼梦")
     var childString = arrayOf(arrayOf("唐三藏", "孙悟空", "猪八戒", "沙和尚"), arrayOf("宋江", "林冲", "李逵", "鲁智深"), arrayOf("曹操", "刘备", "孙权", "诸葛亮", "周瑜"), arrayOf("贾宝玉", "林黛玉", "薛宝钗", "王熙凤"))
 
 
