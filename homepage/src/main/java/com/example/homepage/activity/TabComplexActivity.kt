@@ -29,6 +29,11 @@ class TabComplexActivity : AppCompatActivity(), View.OnClickListener {
      * https://blog.csdn.net/lplj717/article/details/53420593
      */
 
+    /*
+    TODO tab 问题
+    TODO rv 多item布局
+    * */
+
 
     var views = arrayListOf<View>()
 
