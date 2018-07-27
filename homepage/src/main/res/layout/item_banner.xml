@@ -9,6 +9,7 @@
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="180dp"
+        android:visibility="visible"
         app:banner_pageChangeDuration="1000"
         app:banner_pointAutoPlayAble="true"
         app:banner_pointContainerBackground="@android:color/transparent"
