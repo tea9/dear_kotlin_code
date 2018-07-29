@@ -1,1 +1,1 @@
-include ':app', ':homepage', ':fragment'
+include ':app', ':homepage'
