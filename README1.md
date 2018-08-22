@@ -64,12 +64,23 @@ recyclerview布局
 	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
+## recyclerview
     recyclerview分割线
 
     var layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = OrientationHelper.VERTICAL
         recycler_view.layoutManager = layoutManager
         recycler_view.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
+
+    adapter = object : BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_layout,list as List<String>) {
+            override fun convert(helper: BaseViewHolder?, item: String?) {
+                helper!!.setText(R.id.item_tv,item)
+                helper.addOnClickListener(R.id.item_tv)
+            }
+        }
+        adapter!!.onItemChildClickListener = BaseQuickAdapter.OnItemChildClickListener { adapter, view, position ->
+            toast("itemclick"+position)
+        }
 
 
 ## 实体说明
