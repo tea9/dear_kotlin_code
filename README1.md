@@ -1,5 +1,5 @@
 
-![img](https://github.com/tea9/dear_kotlin_code/blob/master/01.png?raw=true)
+![img](https://github.com/tea9/dear_kotlin_code/blob/master/img/01.png?raw=true)
 
 ## 这是完全用kotlin写的Demo
 
