@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_20"
+    android:orientation="vertical">
+    <!--TODO : UI  优化-->
+
+    <TextView
+        android:id="@+id/tv_quotes_day"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:drawablePadding="@dimen/dp_5"
+        tools:drawableRight="@mipmap/ic_launcher"
+        tools:text="5734.58231446"
+        android:text="0.0"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="@dimen/sp_23" />
+
+    <TextView
+        android:id="@+id/tv_quotes_day_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:text="≈ 0.0"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_13" />
+
+    <!--Rise & High Price-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <!--涨跌幅-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="涨跌幅"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_quotes_change_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="+2.5%"
+                android:lines="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_13" />
+
+        </LinearLayout>
+
+
+        <!--最低价-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="高"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_high_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="51314.00000648"
+                android:lines="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_13" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Volume & Low Price-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <!--成交量-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="成交量"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_volume_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="51314.00000026"
+                android:text="0.0"
+                android:lines="1"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="@dimen/sp_13" />
+
+        </LinearLayout>
+
+        <!--最低价-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="低"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_low_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="51314.00000648"
+                android:text="0.0"
+                android:lines="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_13" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -43,7 +43,6 @@ class HomeViewPagerActivity :AppCompatActivity() {
         initViewFlipper()
         initViewpager()
         initMagicIndicator()
-
     }
 
     fun initBanner() {
