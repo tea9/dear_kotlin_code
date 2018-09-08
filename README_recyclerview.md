@@ -19,6 +19,10 @@ Recyclerview
     adapter.addHeaderView(headView)
     rv.adapter = adapter
 
+    adapter!!.onItemChildClickListener = BaseQuickAdapter.OnItemChildClickListener { adapter, view, position ->
+        toast("itemclick"+position)
+    }
+
 
 
 

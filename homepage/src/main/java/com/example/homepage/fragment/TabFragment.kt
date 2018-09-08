@@ -13,14 +13,15 @@ import android.view.ViewGroup
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.example.homepage.R
+import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
 import org.jetbrains.anko.support.v4.toast
+import java.nio.charset.Charset
 
 /**
  * created by tea9 at 2018/7/10
  */
 class TabFragment: Fragment(){
-//        override fun setLayoutId(): Int = R.layout.recycler_view
-
     var pageType:Int = 0
     var data:String = ""
     var adapter:BaseQuickAdapter<String,BaseViewHolder>? = null
@@ -60,8 +61,10 @@ class TabFragment: Fragment(){
         recycler_view.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
 
 //        var item:Array<String> = Gson().fromJson(data,Array<String>::class.java)
-        var list = arrayListOf<String>(data!!,"shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb")
-        adapter = object : BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_layout,list as List<String>) {
+//        var list = arrayListOf<String>(data!!,"shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb","shaomiao","aaa","bbb")
+
+        var list1=  data!!.fromListJson<String>()
+        adapter = object : BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_layout,list1 as List<String>) {
             override fun convert(helper: BaseViewHolder?, item: String?) {
                 helper!!.setText(R.id.item_tv,item)
                 helper.addOnClickListener(R.id.item_tv)
@@ -71,6 +74,11 @@ class TabFragment: Fragment(){
             toast("itemclick"+position)
         }
         recycler_view.adapter = adapter
+    }
+
+    inline fun <reified T> String.fromListJson(charset: Charset = Charset.forName("UTF-8")): ArrayList<T>? {
+        val gson = GsonBuilder().create()
+        return gson.fromJson<ArrayList<T>>(this.toByteArray(charset).toString(charset),object : TypeToken<ArrayList<T>>(){}.type)
     }
 
     fun updateArguments(pageType:Int,data:String) {
