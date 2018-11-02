@@ -1,1 +1,1 @@
-include ':app', ':homepage', ':chart', ':complex', ':constraintlayout'
+include ':app', ':homepage', ':chart', ':complex', ':constraintlayout', ':bottomsheetdialog', ':recyclerview', ':customview'

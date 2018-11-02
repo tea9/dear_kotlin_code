@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="color_radiotext">#FF4081</color>
+    <color name="background">#FF4081</color>
+    <color name="prompt_text_color">#FF4081</color>
+    <color name="ma5">#FF4081</color>
+    <color name="ma10">#FF4081</color>
+    <color name="ma20">#FF4081</color>
+    <color name="red_color">#FF4081</color>
 </resources>

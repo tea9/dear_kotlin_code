@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <!--<com.cointiger.exchange.ui.view.KLineTypeView android:id="@+id/ktv" android:background="@color/view_background" android:layout_width="match_parent" android:layout_height="@dimen/forty" android:layout_alignParentBottom="true" app:default_index="2" app:entries_keys="@array/time_type_keys" app:entries_values="@array/time_type_values"/>-->
+    <View
+        android:id="@+id/ktv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/rlyt_coins_info" android:background="@color/background" android:layout_width="match_parent" android:layout_height="20dp">
+        <TextView android:textSize="12sp" android:textColor="@android:color/white" android:id="@+id/tv_coins" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/not_values" android:maxLines="1" android:layout_centerVertical="true" android:layout_marginStart="15dp"/>
+        <ImageView android:id="@+id/img_back" android:layout_width="20dp" android:layout_height="match_parent" android:src="@mipmap/ic_launcher" android:scaleType="center" android:layout_alignParentEnd="true"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="10dp" android:layout_toStartOf="@+id/img_back" android:layout_toEndOf="@+id/tv_coins">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <!--<com.cointiger.exchange.ui.view.TTFTextView android:textSize="@dimen/text_fourteen_size" android:textColor="@color/red_color" android:id="@+id/tv_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/not_values" android:maxLines="1"/>-->
+                <!--<com.cointiger.exchange.ui.view.TTFTextView android:textSize="@dimen/text_fourteen_size" android:textColor="@android:color/white" android:id="@+id/tv_real_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/not_values" android:maxLines="1" android:layout_marginStart="5dp"/>-->
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="15dp">
+                <TextView android:textSize="13sp" android:textColor="@color/prompt_text_color" android:id="@+id/tv_rose_lable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rose" android:maxLines="1"/>
+                <!--<com.cointiger.exchange.ui.view.TTFTextView android:textSize="13sp" android:id="@+id/tv_rose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/not_values" android:maxLines="1" android:layout_marginStart="5dp"/>-->
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="15dp">
+                <TextView android:textSize="13sp" android:textColor="@color/prompt_text_color" android:id="@+id/tv_volume_lable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hour_volume" android:maxLines="1"/>
+                <!--<com.cointiger.exchange.ui.view.TTFTextView android:textSize="13sp" android:id="@+id/tv_volume" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/not_values" android:maxLines="1" android:inputType="numberDecimal" android:layout_marginStart="5dp"/>-->
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RadioGroup android:orientation="vertical" android:id="@+id/radiogroup" android:background="@color/background" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="20dp" android:layout_height="match_parent" android:layout_above="@+id/ktv" android:layout_below="@+id/rlyt_coins_info" android:layout_alignParentEnd="true">
+        <RadioButton android:textSize="10sp" android:textColor="@color/color_radiotext" android:gravity="center" android:id="@+id/radio_macd" android:layout_width="match_parent" android:layout_height="wrap_content" android:checked="true" android:button="@null" android:text="@string/macd" android:layout_weight="1"/>
+        <RadioButton android:textSize="10sp" android:textColor="@color/color_radiotext" android:gravity="center" android:id="@+id/radio_kdj" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/kdj" android:layout_weight="1"/>
+        <RadioButton android:textSize="10sp" android:textColor="@color/color_radiotext" android:gravity="center" android:id="@+id/radio_boll" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/boll" android:layout_weight="1"/>
+        <RadioButton android:textSize="10sp" android:textColor="@color/color_radiotext" android:gravity="center" android:id="@+id/radio_dmi" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/dmi" android:layout_weight="1"/>
+        <RadioButton android:textSize="10sp" android:textColor="@color/color_radiotext" android:gravity="center" android:id="@+id/radio_expm" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/expm" android:layout_weight="1"/>
+        <RadioButton android:textSize="10sp" android:textColor="@color/color_radiotext" android:gravity="center" android:id="@+id/radio_rsi" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/rsi" android:layout_weight="1"/>
+        <RadioButton android:textSize="10sp" android:textColor="@color/color_radiotext" android:gravity="center" android:id="@+id/radio_wr" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/wr" android:layout_weight="1"/>
+    </RadioGroup>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/ktv" android:layout_below="@+id/rlyt_coins_info" android:layout_toStartOf="@+id/radiogroup">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="7">
+                <com.github.mikephil.charting.charts.CombinedChart android:id="@+id/kline_chart" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginStart="10dp" android:layout_marginEnd="15dp">
+                    <TextView android:textSize="8sp" android:textColor="@color/prompt_text_color" android:id="@+id/tv_open" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+                    <TextView android:textSize="8sp" android:textColor="@color/prompt_text_color" android:id="@+id/tv_height" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="15dp"/>
+                    <TextView android:textSize="8sp" android:textColor="@color/prompt_text_color" android:id="@+id/tv_low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="15dp"/>
+                    <TextView android:textSize="8sp" android:textColor="@color/prompt_text_color" android:id="@+id/tv_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="15dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/llyt_info" android:layout_marginStart="10dp" android:layout_marginEnd="15dp">
+                    <TextView android:textSize="8sp" android:textColor="@color/ma5" android:id="@+id/tv_ma5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+                    <TextView android:textSize="8sp" android:textColor="@color/ma10" android:id="@+id/tv_ma10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="15dp"/>
+                    <TextView android:textSize="8sp" android:textColor="@color/ma20" android:id="@+id/tv_ma20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="15dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="9">
+                <com.github.mikephil.charting.charts.CombinedChart android:id="@+id/amount_chart" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <TextView android:textSize="8sp" android:textColor="@color/ma20" android:id="@+id/tv_vol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:maxLines="1" android:layout_marginStart="10dp"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="8">
+                <com.github.mikephil.charting.charts.CombinedChart android:id="@+id/norm_chart" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="10dp"/>
+                <TextView android:textSize="10sp" android:id="@+id/tv_macd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginEnd="15dp" android:layout_alignParentEnd="true"/>
+                <TextView android:textSize="8sp" android:id="@+id/tv_dea" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/tv_macd"/>
+                <TextView android:textSize="8sp" android:id="@+id/tv_dif" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/tv_dea"/>
+                <TextView android:textSize="8sp" android:id="@+id/tv_macd_lable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/tv_dif"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <!--<com.cointiger.exchange.ui.view.MarkerView android:id="@+id/lv_line" android:background="#22000000" android:layout_width="match_parent" android:layout_height="match_parent"/>-->
+        <!--<com.cointiger.exchange.ui.view.Loading.LoadingView android:id="@+id/lv_loading" android:background="@color/background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>-->
+    </FrameLayout>
+</RelativeLayout>

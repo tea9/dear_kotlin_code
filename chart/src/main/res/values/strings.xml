@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">chart</string>
     <string name="no_data_available">暂无数据</string>
+    <string name="rose">暂无数据</string>
+    <string name="hour_volume">暂无数据</string>
+    <string name="macd">暂无数据</string>
+    <string name="kdj">暂无数据</string>
+    <string name="boll">暂无数据</string>
+    <string name="dmi">暂无数据</string>
+    <string name="expm">暂无数据</string>
+    <string name="rsi">暂无数据</string>
+    <string name="wr">暂无数据</string>
+    <string name="not_values">暂无数据</string>
 </resources>

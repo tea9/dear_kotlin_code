@@ -53,4 +53,5 @@
     <dimen name="dp_110">110dp</dimen>
     <dimen name="dp_150">150dp</dimen>
     <dimen name="dp_200">200dp</dimen>
+    <dimen name="text_fourteen_size">40sp</dimen>
 </resources>

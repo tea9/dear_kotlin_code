@@ -21,6 +21,7 @@
         <activity android:name=".activity.HomeViewPagerActivity"/>
         <activity android:name=".activity.TabComplexActivity"/>
         <activity android:name=".activity.HomePageActivity"/>
+        <activity android:name=".activity.SVLisActivity"/>
     </application>
 
 </manifest>

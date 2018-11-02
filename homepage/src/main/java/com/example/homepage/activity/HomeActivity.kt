@@ -34,7 +34,7 @@ import kotlin.collections.ArrayList
  */
 class HomeActivity :AppCompatActivity() {
 
-    var tabList = arrayListOf("tab1","tab2","tab3","tab4","tab5","tab6","tab7")
+    var tabList = arrayListOf("标题1","标题2","tab3dddd","tab45555","tabdddd5","tabkkkk6","tabssdsd7")
     var imgList:ArrayList<String> = arrayListOf("https://images.unsplash.com/photo-1531026383433-6ed5a112afbc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c010c700aac502636ad0b579ce1274a4&auto=format&fit=crop&w=1650&q=80","https://images.unsplash.com/photo-1531075515553-b4d1f75ff534?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3f6b409e70fca36a74369d882e85f49&auto=format&fit=crop&w=1567&q=80","https://images.unsplash.com/photo-1531130744926-1d86103aebeb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=28f240aae3de685fc4742f09c922f6f8&auto=format&fit=crop&w=1714&q=80")
     var mesList = arrayListOf("您的公告1","您的公告2","您的公告3")
     var fragmentList:ArrayList<Fragment>? = ArrayList()
@@ -97,6 +97,7 @@ class HomeActivity :AppCompatActivity() {
                 colorTransitionPagerTitleView.normalColor= ContextCompat.getColor(p0!!,R.color.abc_btn_colored_borderless_text_material)
                 colorTransitionPagerTitleView.selectedColor = ContextCompat.getColor(p0!!,R.color.abc_btn_colored_borderless_text_material)
                 colorTransitionPagerTitleView.text = tabList[p1].toUpperCase()
+                colorTransitionPagerTitleView.textSize = 15f
 
                 colorTransitionPagerTitleView.setOnClickListener (View.OnClickListener {
                     //                    view_pager.currentItem = p1
@@ -113,14 +114,20 @@ class HomeActivity :AppCompatActivity() {
             }
             override fun getIndicator(p0: Context?): IPagerIndicator {
                 var indicator: LinePagerIndicator = LinePagerIndicator(p0)
-                indicator.mode = LinePagerIndicator.MODE_EXACTLY
-                indicator.setColors(ContextCompat.getColor(p0!!,R.color.abc_btn_colored_borderless_text_material))
+                indicator.mode = LinePagerIndicator.MODE_WRAP_CONTENT
+                indicator.setColors(ContextCompat.getColor(p0!!,R.color.abc_search_url_text ))
+//                indicator.lineHeight = 100f
+//                indicator.yOffset = -5f
+//                indicator.x = 0.0f
+                indicator.y = -5f
+                indicator.lineHeight = 15f
                 return indicator
 
             }
         }
         magic_indicator.navigator = commonNavigator
         fragmentContainerHelper.attachMagicIndicator(magic_indicator)
+
     }
 
     fun switchPages(index:Int) {

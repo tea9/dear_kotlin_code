@@ -3,10 +3,7 @@ package com.example.homepage
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.example.homepage.activity.HomeActivity
-import com.example.homepage.activity.HomePageActivity
-import com.example.homepage.activity.HomeViewPagerActivity
-import com.example.homepage.activity.TabComplexActivity
+import com.example.homepage.activity.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
@@ -41,6 +38,11 @@ class MainActivity : AppCompatActivity(){
                     backgroundColor = R.color.colorPrimaryDark
                     textColor = Color.WHITE
                     onClick { startActivity<HomePageActivity>() }
+                }
+                button(R.string.btn5){
+                    backgroundColor = R.color.colorPrimaryDark
+                    textColor = Color.WHITE
+                    onClick { startActivity<SVLisActivity>() }
                 }
             }
         }
