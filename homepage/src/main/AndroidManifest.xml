@@ -22,6 +22,7 @@
         <activity android:name=".activity.TabComplexActivity"/>
         <activity android:name=".activity.HomePageActivity"/>
         <activity android:name=".activity.SVLisActivity"/>
+        <activity android:name=".activity.HH"/>
     </application>
 
 </manifest>

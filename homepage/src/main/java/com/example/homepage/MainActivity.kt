@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity(){
                     textColor = Color.WHITE
                     onClick { startActivity<SVLisActivity>() }
                 }
+                button("控件反射测试"){
+                    backgroundColor = R.color.colorPrimaryDark
+                    textColor = Color.WHITE
+                    onClick { startActivity<HH>() }
+                }
             }
         }
 
