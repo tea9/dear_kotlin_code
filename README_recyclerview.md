@@ -42,6 +42,18 @@ Recyclerview
 
         val color = ContextCompat.getColor(this, R.color.colorA1A1A1)
 
+java
 
+    new BaseQuickAdapter<BetDetailsBean.BetTypesBean, BaseViewHolder>(R.layout.item_tab, detailsBean.getBet_types()) {
+                            @Override
+                            protected void convert(BaseViewHolder helper, BetDetailsBean.BetTypesBean item) {
+                                helper.setText(R.id.tab_name_tv, item.getName());
+                                if (item.getIsselect()) {
+                                    helper.setTextColor(R.id.tab_name_tv, getResources().getColor(R.color.colorBlack));
+                                } else {
+                                    helper.setTextColor(R.id.tab_name_tv, getResources().getColor(R.color.colorAAAAAA));
+                                }
+                            }
+                        };
 
 
