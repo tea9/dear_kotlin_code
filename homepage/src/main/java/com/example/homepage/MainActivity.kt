@@ -4,6 +4,8 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.homepage.activity.*
+import com.example.homepage.recyclerview.ExpandableUseActivity
+import com.example.homepage.recyclerview.GroupLayoutActivity
 import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
@@ -48,6 +50,16 @@ class MainActivity : AppCompatActivity(){
                     backgroundColor = R.color.colorPrimaryDark
                     textColor = Color.WHITE
                     onClick { startActivity<HH>() }
+                }
+                button("group"){
+                    backgroundColor = R.color.colorPrimaryDark
+                    textColor = Color.WHITE
+                    onClick { startActivity<GroupLayoutActivity>() }
+                }
+                button("parent"){
+                    backgroundColor = R.color.colorPrimaryDark
+                    textColor = Color.WHITE
+                    onClick { startActivity<ExpandableUseActivity>() }
                 }
             }
         }

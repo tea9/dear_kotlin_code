@@ -23,6 +23,8 @@
         <activity android:name=".activity.HomePageActivity"/>
         <activity android:name=".activity.SVLisActivity"/>
         <activity android:name=".activity.HH"/>
+        <activity android:name=".recyclerview.GroupLayoutActivity"/>
+        <activity android:name=".recyclerview.ExpandableUseActivity"/>
     </application>
 
 </manifest>
