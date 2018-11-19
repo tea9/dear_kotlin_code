@@ -11,11 +11,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bottomsheetdialog" />
             <option value="$PROJECT_DIR$/chart" />
-            <option value="$PROJECT_DIR$/complex" />
             <option value="$PROJECT_DIR$/constraintlayout" />
-            <option value="$PROJECT_DIR$/customview" />
             <option value="$PROJECT_DIR$/homepage" />
-            <option value="$PROJECT_DIR$/recyclerview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
