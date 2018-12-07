@@ -5,13 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.chad.baserecyclerviewadapterhelper.adapter.ExpandableItemAdapter;
-import com.chad.baserecyclerviewadapterhelper.base.BaseActivity;
-import com.chad.baserecyclerviewadapterhelper.entity.Level0Item;
-import com.chad.baserecyclerviewadapterhelper.entity.Level1Item;
-import com.chad.baserecyclerviewadapterhelper.entity.Person;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.example.homepage.R;
+import com.example.homepage.recyclerview.adapter.ExpandableItemAdapter;
+import com.example.homepage.recyclerview.item.Level0Item;
+import com.example.homepage.recyclerview.item.Level1Item;
+import com.example.homepage.recyclerview.item.Person;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -26,11 +25,11 @@ public class ExpandableUseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setBackBtn();
+
         setTitle("ExpandableItem Activity");
         setContentView(R.layout.activity_recyclerview);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv);
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         list = generateData();
         adapter = new ExpandableItemAdapter(list);
